@@ -2,7 +2,7 @@
 
 Suported Angular versions: 16 and 17.
 
-[Click here to try it on StackBlitz](https://stackblitz.com/edit/stackblitz-starters-3z8ma9)
+[Click here to try it on StackBlitz](https://stackblitz.com/edit/stackblitz-starters-f1ythy)
 
 ## Usage
 Add the package as a dependency to your project using:

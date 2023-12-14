@@ -1,27 +1,58 @@
-# AngularRouteReuse
+# Angular Route Reuse (Cashing)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.10.
+Suported Angular versions: 16 and 17.
 
-## Development server
+[Click here to try it on StackBlitz](https://stackblitz.com/edit/stackblitz-starters-f1ythy)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Usage
+Add the package as a dependency to your project using:
 
-## Code scaffolding
+```
+npm install ngx-route-reuse
+# or
+pnpm install ngx-route-reuse
+# or
+yarn add ngx-route-reuse
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Add module to you app.module imports:
 
-## Build
+```typescript
+import { NgxRouteReuse } from 'ngx-route-reuse';
+...
+@NgModule({
+    providers: [{provide: RouteReuseStrategy, useClass: NgxRouteReuse}],
+    ...
+})
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Define reuseble components in route config:
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```typescript
+const routes: Routes = [
+  {
+    path: 'page1',
+    component: Page1Component,
+    data: {
+      name: 'Page1',
+      reuseRoute: true,
+      reuseFromComponents: ['Page2'], // optional - if defined it will reuse component only from specific component
+    },
+  },
+  {
+    path: 'page2',
+    component: Page2Component,
+    data: {
+      name: 'Page2',
+      reuseRoute: true,
+      //  if not defined it will reuse component comming from any
+    },
+  },
+  {
+    path: 'page3',
+    component: Page3Component,
+    // no route reuse
+  },
+  ...
+];
+  ```
