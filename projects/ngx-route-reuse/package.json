@@ -4,7 +4,7 @@
 
 
   "description": "This is the cashing library for Angular",
-  "keywords": ["cashing", "angular", "route reuse", "cashe"],
+  "keywords": ["cashing", "angular", "route reuse", "cashe", "reuse components"],
   "author": {
     "name": "Nikola Vojvodic",
     "url": "https://github.com/vojvodicn23"
@@ -12,7 +12,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vojvodicn23"
+    "url": "https://github.com/vojvodicn23/ngx-route-reuse"
   },
 
   "peerDependencies": {

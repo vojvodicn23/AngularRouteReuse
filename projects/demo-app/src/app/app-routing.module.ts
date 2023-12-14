@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { Page1Component } from './page1/page1.component';
 import { Page2Component } from './page2/page2.component';
+import { Page3Component } from './page3/page3.component';
 
 const routes: Routes = [
   {
@@ -19,8 +20,12 @@ const routes: Routes = [
     data: {
       name: 'Page2',
       reuseRoute: true,
-      reuseFromComponents: ['Page1'],
     },
+  },
+  {
+    path: 'page3',
+    component: Page3Component,
+
   },
   {
     path: '**',

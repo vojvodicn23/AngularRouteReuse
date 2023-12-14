@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-page1',
   templateUrl: './page1.component.html',
-  styleUrls: ['./page1.component.css']
+  styleUrls: []
 })
 export class Page1Component implements OnInit{
   
@@ -13,6 +13,6 @@ export class Page1Component implements OnInit{
   ngOnInit() {
     setTimeout(()=>{
       this.page1 = 'PAGE 1';
-    },5000);
+    },3000);
   }
 }
