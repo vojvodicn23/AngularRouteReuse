@@ -1,0 +1,26 @@
+{
+  "name": "ngx-route-reuse",
+  "version": "0.0.1",
+
+
+  "description": "This is the cashing library for Angular",
+  "keywords": ["cashing", "angular", "route reuse", "cashe"],
+  "author": {
+    "name": "Nikola Vojvodic",
+    "url": "https://github.com/vojvodicn23"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vojvodicn23"
+  },
+
+  "peerDependencies": {
+    "@angular/common": "^16.2.0 || ^17.0.0",
+    "@angular/core": "^16.2.0 || ^17.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}
